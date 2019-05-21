@@ -166,6 +166,15 @@
 
               </header>
 
+              <discover-histogram
+                style="display: flex; height: 200px"
+                ng-show="vis && rows.length !== 0"
+                chart-data="histogramData"
+                app-state="state"
+                vis-lib="vis"
+                watch-depth="reference"
+              ></discover-histogram>
+
               <div id="discoverHistogram"
                 ng-show="vis && rows.length !== 0"
                 style="display: flex; height: 200px"

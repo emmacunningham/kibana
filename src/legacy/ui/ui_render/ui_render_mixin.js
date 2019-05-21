@@ -128,6 +128,7 @@ export function uiRenderMixin(kbnServer, server, config) {
                 `${basePath}/node_modules/@elastic/charts/dist/theme_only_light.css`,
               ]
           ),
+          `${basePath}/node_modules/@elastic/charts/dist/style.css`,
           `${regularBundlePath}/${darkMode ? 'dark' : 'light'}_theme.style.css`,
           `${regularBundlePath}/commons.style.css`,
           `${regularBundlePath}/${app.getId()}.style.css`,

@@ -56,6 +56,7 @@ import { VisualizeLoaderProvider } from 'ui/visualize/loader/visualize_loader';
 import { recentlyAccessed } from 'ui/persisted_log';
 import { getDocLink } from 'ui/documentation_links';
 import '../components/fetch_error';
+import '../components/histogram';
 import { getPainlessError } from './get_painless_error';
 import { showShareContextMenu, ShareContextMenuExtensionsRegistryProvider } from 'ui/share';
 import { getUnhashableStatesProvider } from 'ui/state_management/state_hashing';
@@ -739,6 +740,7 @@ function discoverController(
         .resolve(buildVislibDimensions($scope.vis, { timeRange: $scope.timeRange, searchSource: $scope.searchSource }))
         .then(resp => responseHandler(tabifiedData, resp))
         .then(resp => {
+          $scope.histogramData = resp;
           visualizeHandler.render({
             as: 'visualization',
             value: {
